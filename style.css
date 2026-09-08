@@ -644,15 +644,33 @@ nav .fa-shopping-cart:active{
     width: 40%;
     margin-right: 30px;
 }
-.product-image-group{
+
+.product-image #mainImg {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.product-image-group {
     display: flex;
-    justify-content: space-between;
+    gap: 10px;
+    margin-top: 10px;
 }
-.product-image-col{
-   flex-basis: 24%;
-   cursor: pointer;
- 
+
+.product-image-col {
+    width: 30%;
+    cursor: pointer;
 }
+
+.product-image-col img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
 .add-cart:active {
     transform: scale(0.8);
 }
@@ -1309,8 +1327,6 @@ nav .fa-shopping-cart:active{
         padding: 0 12px;
     }
 
-   
-
     .hero-section {
         display: flex;
         align-items: center;
@@ -1332,25 +1348,23 @@ nav .fa-shopping-cart:active{
         font-size: 3.8rem;
         line-height: 1.2;
     }
-
-
-
     .pro-container {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        gap: 20px;
+        gap: 25px;
         padding: 25px;
         margin: 0 20px;
     }
     .pro {
-        width: 40%;
+        width: calc(50% - 12.5px);
         max-width: 400px;
         margin: 20px 0;
         padding: 0 5px;
-        position: relative;
     }
-
+    .pro-container img {
+        height: 30vh;
+    }
 
     .banner {
         height: 25vh;
@@ -1377,8 +1391,6 @@ nav .fa-shopping-cart:active{
     .sm-banner .bannerbox h6 {
         font-size: 1rem;
     }
-
-
 
     .newsletter {
         display: flex;
@@ -1501,10 +1513,11 @@ nav .fa-shopping-cart:active{
         position: relative;
         z-index: 3;
     }
-
-    .pro {
-        width: 100%;
-        position: relative;
+   .pro {
+    width: calc(50% - 7.5px);
+   }
+  .pro-container img {
+    height: 25vh;
     }
 
 
@@ -1681,14 +1694,23 @@ nav .fa-shopping-cart:active{
         padding: 9px;
         font-size: 0.75rem;
     }
-    .plus-btn,
-    .minus-btn {
-        width: 12px;
-        height: 12px;
-        font-size: 11px;
-        line-height: 16px;
-        border-radius: 3px;
-    }
+    
+.minus-btn,
+.plus-btn {
+    width: 18px;
+    height: 18px;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    line-height: 1;
+}
+.cart-page td:nth-child(5) {
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+}
 
 
     .checkout {
