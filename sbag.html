@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bromo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css" integrity="sha384-NvKbDTEnL+A8F/AA5Tc5kmMLSJHUO868P+lDtTpJIeQdGYaUIuLr4lVGOEA1OcMy" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+          <nav>
+            <a href="index.html">
+                <img src="images/logo.png" loading="lazy" id="logo" alt="Logo">
+            </a>  
+            <ul class="nav-links">
+                <i class="fa-solid fa-xmark" id="closeBtn"></i>
+                <li><a href="index.html" >Home</a></li>
+                <li><a href="shop.html" class="active">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>    
+                <li><a href="cart.html"><i class="fas fa-shopping-cart"></i></a></li></li>
+            </ul>
+            <div>
+                <a href="cart.html"><i class="fas fa-shopping-cart" id="no-cart"></i></a>
+             <i class="fa-solid fa-bars" id="menuBtn"></i>
+            </div>  
+         </nav>
+    </header>
+    <main>
+       <section class="product-details">
+           <div class="product-image">
+              <img src="images/c6.jpg" width="100%" id="mainImg" class="main-BlackShirt">
+              <div class="product-image-group">
+                <div class="product-image-col" id="small-BlackShirt">
+                    <img src="images/c6.jpg" width="100%" class="small-Img" >
+                </div>
+                <div class="product-image-col" id="small-BlackShirt" id="small-BlackShirt">
+                    <img src="images/d1.jpg" width="100%" class="small-Img">
+                </div>
+                <div class="product-image-col" id="small-BlackShirt">
+                    <img src="images/c5.jpg" width="100%" class="small-Img">
+                </div>
+              </div>
+           </div>
+           <div class="product-content">
+             <h6>Home / Bags</h6>
+             <h4>Female Bags</h4>
+             <h3> $100.00</h3>
+             <select name="" id="dropdown">
+              <option value=""> Select Size  </option>
+              <option value="l">L</option>
+              <option value="xl">XL</option>
+              <option value="2xl">2XL</option>
+              <option value="3xl">3XL</option>
+             </select>
+             <div id="product-indication">
+               <input type="number" value="1">
+               <Button id="addToCartBtn">Add To Cart</Button>
+             </div>
+             <div class="Product-Description">
+              <h3>Product Details</h3>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio,
+                 sequi voluptatibus atque dolorum tempore mollitia natus odio reiciendis
+                  eveniet! Nulla minima eos mollitia sequi quis fugit error, cupiditate 
+                  consectetur enim.
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio,
+                 sequi voluptatibus atque dolorum tempore mollitia natus odio reiciendis
+                  eveniet! Nulla minima eos mollitia sequi quis fugit error, cupiditate 
+                  consectetur enim.
+                </p>
+             </div>
+           </div>
+        </section>
+         <section class="Product2">
+          <div class="pro-container">
+            <div class="pro">
+                <img src="images/n2.jpg" alt="">
+                <span>New</span>
+                <div class="pro-description">
+                  <div class="favorite">
+                    <h4>Crochet Top</h4>
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                    <div class="star-icon">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      
+                    </div>
+                    <div class="price"> $80</div>
+                </div>
+                <div class="add-cart">
+                       <i class="fas fa-shopping-cart"></i>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="images/e2.jpg" alt="">
+                <span>New</span>
+                <div class="pro-description">
+                    <div class="favorite">
+                    <h4>Jean Trouser</h4>
+                    <i class="fa-regular fa-heart"></i>
+                    </div>
+                    <div class="star-icon">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      
+                    </div>
+                    <div class="price"> $80</div>
+                </div>
+                <div class="add-cart">
+                       <i class="fas fa-shopping-cart"></i>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="images/c7.jpg" alt="">
+                <span>New</span>
+                <div class="pro-description">
+                  <div class="favorite">
+                    <h4>Bag</h4>
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                    <div class="star-icon">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      
+                    </div>
+                    <div class="price"> $80</div>
+                </div>
+                <div class="add-cart">
+                       <i class="fas fa-shopping-cart"></i>
+                </div>
+            </div>
+            <div class="pro">
+                <img src="images/n1.jpg" alt="">
+                <span>New</span>
+                <div class="pro-description">
+                  <div class="favorite">
+                    <h4>Jort Jean</h4>
+                    <i class="fa-regular fa-heart"></i>
+                  </div>
+                    <div class="star-icon">
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      <i class="fa-solid fa-star"></i>
+                      
+                    </div>
+                    <div class="price"> $80</div>
+                </div>
+                <div class="add-cart">
+                       <i class="fas fa-shopping-cart"></i>
+                </div>
+            </div>
+
+            </div>
+            </div>
+        </section>
+        
+        <footer class="footer">
+  <div class="col">
+    <a href="index.html">
+      <img src="images/logo.png" loading="lazy" class="logo" alt="Logo">
+    </a>
+
+    <h4>Contact</h4>
+    <p><strong>Address:</strong> 123 Bolaji Street, Ikeja, Lagos.</p>
+    <p><strong>Phone:</strong> +234 912 3456 789</p>
+    <p><strong>Hours:</strong> 8:00am - 6:00pm, Mon - Sat</p>
+
+    <div class="socials">
+      <h4>Follow Us</h4>
+      <i class="fa-brands fa-facebook"></i>
+      <i class="fa-brands fa-square-instagram"></i>
+      <i class="fa-brands fa-tiktok"></i>
+    </div>
+  </div>
+
+  <div class="col">
+    <h4>About Us</h4>
+    <ul>
+      <li><a href="about.html">About</a></li>
+      <li><a href="#">Delivery Information</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+      <li><a href="#">Terms &amp; Conditions</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+  </div>
+
+  <div class="col">
+    <h4>My Account</h4>
+    <ul>
+      <li><a href="#">Sign In</a></li>
+      <li><a href="#">View Cart</a></li>
+      <li><a href="#">My Wishlist</a></li>
+      <li><a href="#">Track My Order</a></li>
+      <li><a href="#">Help</a></li>
+    </ul>
+  </div>
+
+  <div class="col">
+    <h4>Install App</h4>
+    <p>From App Store or Google Play</p>
+
+    <div class="app-row">
+      <img src="images/play.jpg" alt="Google Play">
+      <img src="images/app (1).jpg" alt="App Store">
+    </div>
+
+    <p>Secured Payment Gateway</p>
+    <img src="images/pay.png" class="payment" alt="Payment Methods">
+  </div>
+
+  <div class="copyright">
+    <p>&copy; 2026 Bromo. All rights reserved.</p>
+  </div>
+</footer>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

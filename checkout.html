@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bromo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css" integrity="sha384-NvKbDTEnL+A8F/AA5Tc5kmMLSJHUO868P+lDtTpJIeQdGYaUIuLr4lVGOEA1OcMy" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+         <nav>
+           <a href="index.html"> 
+                <img src="images/logo.png" loading="lazy" id="logo" alt="Logo">
+            </a>     
+            <ul class="nav-links">
+                <i class="fa-solid fa-xmark" id="closeBtn"></i>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="about.html" >About</a></li>
+                <li><a href="contact.html" >Contact</a></li>    
+                <li><a href="cart.html" class="active"><i class="fas fa-shopping-cart"></i></a></li>
+            </ul>
+            <div>
+                <a href="cart.html"><i class="fas fa-shopping-cart" id="no-cart"></i></a>
+                <i class="fa-solid fa-bars" id="menuBtn"></i>
+            </div>  
+         </nav>
+    </header>
+    <main>
+       <section class="checkout">
+    <div class="checkout-container">
+
+        <div class="billing-details">
+            <h2>Billing Details</h2>
+            <form id="checkoutForm">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" required>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" required>
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" required>
+
+                <label for="address">Delivery Address</label>
+                <textarea id="address" required></textarea>
+
+                <label for="city">City</label>
+                <input type="text" id="city" required>
+            </form>
+
+            <div class="payment-section">
+                <h2>Payment Method</h2>
+                <label>
+                    <input type="radio" name="payment" value="card" checked>
+                    Debit/Credit Card
+                </label>
+                <label>
+                    <input type="radio" name="payment" value="transfer">
+                    Bank Transfer
+                </label>
+                <label>
+                    <input type="radio" name="payment" value="cash">
+                    Cash on Delivery
+                </label>
+
+                <button type="button" id="pay-btn">Pay Now</button>
+
+                <div id="payment-success" class="payment-success">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <h3>Payment Successful!</h3>
+                    <p>Thank you for your order. Your payment has been received.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="order-summary">
+            <h2>Your Order</h2>
+
+            <div id="checkoutItems"></div>
+            <div class="checkout-total">
+                <strong>Total:</strong>
+                <span id="checkoutTotal">₦0</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+ <footer class="footer">
+  <div class="col">
+       <a href="index.html">
+         <img src="images/logo.png" loading="lazy" class="logo" alt="Logo">
+       </a>
+
+    <h4>Contact</h4>
+    <p><strong>Address:</strong> 123 Bolaji Street, Ikeja, Lagos.</p>
+    <p><strong>Phone:</strong> +234 912 3456 789</p>
+    <p><strong>Hours:</strong> 8:00am - 6:00pm, Mon - Sat</p>
+
+    <div class="socials">
+      <h4>Follow Us</h4>
+      <i class="fa-brands fa-facebook"></i>
+      <i class="fa-brands fa-square-instagram"></i>
+      <i class="fa-brands fa-tiktok"></i>
+    </div>
+  </div>
+
+  <div class="col">
+    <h4>About Us</h4>
+    <ul>
+      <li><a href="about.html">About</a></li>
+      <li><a href="#">Delivery Information</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+      <li><a href="#">Terms &amp; Conditions</a></li>
+      <li><a href="#">Contact Us</a></li>
+    </ul>
+  </div>
+
+  <div class="col">
+    <h4>My Account</h4>
+    <ul>
+      <li><a href="#">Sign In</a></li>
+      <li><a href="#">View Cart</a></li>
+      <li><a href="#">My Wishlist</a></li>
+      <li><a href="#">Track My Order</a></li>
+      <li><a href="#">Help</a></li>
+    </ul>
+  </div>
+
+  <div class="col">
+    <h4>Install App</h4>
+    <p>From App Store or Google Play</p>
+
+    <div class="app-row">
+      <img src="images/play.jpg" alt="Google Play">
+      <img src="images/app (1).jpg" alt="App Store">
+    </div>
+
+    <p>Secured Payment Gateway</p>
+    <img src="images/pay.png" class="payment" alt="Payment Methods">
+  </div>
+
+  <div class="copyright">
+    <p>&copy; 2026 Bromo. All rights reserved.</p>
+  </div>
+</footer>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
