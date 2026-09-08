@@ -1301,7 +1301,7 @@ nav .fa-shopping-cart:active{
 
 @media (min-width: 768px) and (max-width: 1024px) {
 
-    /* ---------- NAVIGATION ---------- */
+  
     nav {
         padding: 10px 30px;
     }
@@ -1309,7 +1309,7 @@ nav .fa-shopping-cart:active{
         padding: 0 12px;
     }
 
-    /* ---------- HERO ---------- */
+   
 
     .hero-section {
         display: flex;
@@ -1334,7 +1334,6 @@ nav .fa-shopping-cart:active{
     }
 
 
-    /* ---------- PRODUCTS ---------- */
 
     .pro-container {
         display: flex;
@@ -1352,8 +1351,6 @@ nav .fa-shopping-cart:active{
         position: relative;
     }
 
-
-    /* ---------- BANNER ---------- */
 
     .banner {
         height: 25vh;
@@ -1382,7 +1379,6 @@ nav .fa-shopping-cart:active{
     }
 
 
-    /* ---------- NEWSLETTER ---------- */
 
     .newsletter {
         display: flex;
@@ -1395,8 +1391,6 @@ nav .fa-shopping-cart:active{
     }
 
 
-    /* ---------- FOOTER ---------- */
-
     .footer {
         padding: 40px 30px 20px;
         gap: 30px;
@@ -1404,9 +1398,6 @@ nav .fa-shopping-cart:active{
     .footer .app-row {
         justify-content: flex-start;
     }
-
-
-    /* ---------- CHECKOUT ---------- */
     .checkout-container {
         gap: 30px;
     }
@@ -1418,6 +1409,9 @@ nav .fa-shopping-cart:active{
     }
     .about-app .video {
     margin: 20px auto 0;
+}
+.cart-page {
+    padding: 60px 30px;
 }
 
 }
@@ -1475,7 +1469,6 @@ nav .fa-shopping-cart:active{
         text-decoration: none;
     }
 
-    /* ---------- HERO ---------- */
 
     .hero-section {
         position: relative;
@@ -1509,15 +1502,12 @@ nav .fa-shopping-cart:active{
         z-index: 3;
     }
 
-
-    /* ---------- PRODUCTS ---------- */
     .pro {
         width: 100%;
         position: relative;
     }
 
 
-    /* ---------- BANNER ---------- */
     .banner {
         padding: 20px 10px;
         height: 25vh;
@@ -1534,7 +1524,6 @@ nav .fa-shopping-cart:active{
         font-size: 0.7rem;
     }
 
-    /* ---------- SMALL BANNERS ---------- */
 
     .sm-banner {
         padding: 20px;
@@ -1554,7 +1543,6 @@ nav .fa-shopping-cart:active{
         line-height: 1.2;
     }
 
-    /* ---------- NEWSLETTER ---------- */
     .newsletter {
         height: auto;
         padding: 25px 20px;
@@ -1566,7 +1554,7 @@ nav .fa-shopping-cart:active{
     .newsletter .form input {
         min-width: 0;
     }
-    /* ---------- PRODUCT DETAILS ---------- */
+  
 
     .product-details {
         display: flex;
@@ -1582,7 +1570,6 @@ nav .fa-shopping-cart:active{
     }
 
 
-    /* ---------- BLOG ---------- */
     .blog-col {
         display: flex;
         flex-direction: column;
@@ -1600,7 +1587,7 @@ nav .fa-shopping-cart:active{
         margin-top: 10px;
     }
 
-    /* ---------- ABOUT ---------- */
+  
     .about-details {
         display: flex;
         flex-direction: column;
@@ -1612,7 +1599,7 @@ nav .fa-shopping-cart:active{
     .about-details .about-text {
         width: 100%;
     }
-    /* ---------- CONTACT ---------- */
+  
     .form-details {
         width: 80%;
         height: 450px;
@@ -1631,15 +1618,16 @@ nav .fa-shopping-cart:active{
         margin-top: 5px;
         padding: 0;
     }
-    /* ---------- CART ---------- */
+   
     .cart-page {
         width: 100%;
         padding: 20px 10px;
         box-sizing: border-box;
     }
+    
     .cart-page h2 {
         font-size: 1.3rem;
-        margin-bottom: 20px;
+        margin: 50px 0 20px 0;
     }
     .cart-page table {
         width: 100%;
@@ -1656,6 +1644,16 @@ nav .fa-shopping-cart:active{
     .cart-page td img {
         width: 40px;
         height: 40px;
+    }
+    
+    .remove-btn {
+        font-size: 7px;
+        padding: 3px 4px;
+        border-radius: 3px;
+        width: 45px;
+        min-width: 0;
+        line-height: 1.1;
+        box-sizing: border-box;
     }
     .cart-page table td:nth-child(2) {
         font-size: 7px !important;
@@ -1685,15 +1683,14 @@ nav .fa-shopping-cart:active{
     }
     .plus-btn,
     .minus-btn {
-        width: 18px;
-        height: 18px;
+        width: 12px;
+        height: 12px;
         font-size: 11px;
         line-height: 16px;
         border-radius: 3px;
     }
 
 
-    /* ---------- CHECKOUT ---------- */
     .checkout {
         padding: 40px 5%;
     }
@@ -1707,7 +1704,6 @@ nav .fa-shopping-cart:active{
     }
 
 
-    /* ---------- FOOTER ---------- */
     .footer {
         grid-template-columns: 1fr;
         padding: 35px 20px 20px;
@@ -1733,466 +1729,3 @@ nav .fa-shopping-cart:active{
     margin: 10px auto 0;
 }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* @media (max-width: 768px){
-
-    .footer{
-        padding: 40px 30px 20px;
-        gap: 30px;
-    }
-
-    .footer .app-row{
-        justify-content: flex-start;
-    }
-}
-
-@media (max-width: 480px){
-
-    .footer{
-        grid-template-columns: 1fr;
-        padding: 35px 20px 20px;
-        text-align: left;
-    }
-
-    .footer .logo{
-        width: 120px;
-    }
-
-    .footer h4{
-        font-size: 1rem;
-    }
-
-    .footer p,
-    .footer li a{
-        font-size: 0.9rem;
-    }
-
-    .footer .app-row img{
-        width: 110px;
-    }
-
-    .footer .payment{
-        width: 160px;
-    }
-}
-
-
-
-@media(max-width: 767px){
-    .nav-links li{
-        display: block;
-        padding-top: 25px;
-    }
-    nav{
-        position: relative;
-        display: flex;
-        justify-content: space-between;
-    }
-    nav div{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-  
-    nav div #no-cart{
-    display: block;
-}
-nav a .fa-shopping-cart{
-    color: #334155;
-    transition: .3s;
-    display: none;
-}
-    nav .fa-solid{
-    display: block;
-    margin: 15px;
-}
-.nav-links li a.active::after,
-.nav-links li a:hover::after{
-  content: none;
-    background-color: #555;  
-}
-.nav-links li a {
-    font-size: 1.4rem;
-}
-    .nav-links{
-        position: absolute;
-        top: 0;
-        right: -100%;
-        display: block;
-        width: 50%;
-        height: 100vh;
-        background-color: #f8fafc;
-        overflow: hidden;
-        padding: 10px;
-        position: fixed;
-        transition: .3s;
-    }
-    .show{
-        right: 0;
-    }
-    .pro{
-        width: 100%;
-        position: relative;
-    }
-
-    .hero-section{
-        position: relative;
-        min-height: 90vh;
-        display: flex;
-        align-items: center;
-        overflow: hidden;
-    }
-    .hero-section img{
-        position: absolute;
-        inset: 0;
-        width: 100%;
-        height: 100%;
-      
-        object-position: right center;
-        z-index: 1;
-    }
-    .text-content{
-        width: 90%;
-        position: relative;
-        z-index: 2;  
-    }
-    .hero-section::before{
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(to right, 
-           rgba(255, 255, 255, 0.75),
-           rgba(255, 255, 255, 0.1));
-           z-index: 2;
-    }
-    .text-content{
-        z-index: 3;
-    }
-    .banner h4{
-        font-size: 0.9rem;
-    }
-    .banner h2{
-        font-size: 1.9rem;
-    }
-
-    .banner {
-        padding: 20px 10px;
-        height: 25vh;
-    }
-.banner h4 {
-    font-size: 0.6rem;
-     margin-bottom: 7px;
-}
-.banner h2{
-    font-size: 1.7rem;
-}
-.banner button {
-    padding: 6px;
-    font-size: 0.7rem;
-}
-
-   .newsletter{
-        height: auto;
-        padding: 25px 20px;
-        gap: 15px;
-    }
-
-    .newsletter .form{
-        width: 100%;
-    }
-
-    .newsletter .form input{
-        min-width: 0;
-    }
-    .sm-banner{
-        padding: 20px;
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .sm-banner .bannerbox{
-        width: 100%;
-        min-height: 280px;
-        padding: 20px;
-        justify-content: center;
-        align-items: flex-start;
-        text-align: left;
-    }
-
-    .sm-banner .bannerbox h2{
-        font-size: 1.8rem;
-        line-height: 1.2;
-    }
-    nav a{
-       text-decoration: none;
-    }
-  .product-details .product-image {
-    width: 100%;
-}
-.product-details {
-    display: flex;
-    flex-direction: column;
-    margin: 80px 20px 0 20px;
-}
-.product-content {
-    padding-top: 20px;
-    width: 100%;
-}
-.blog-col {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 60px;
-    width: 100%;
-}
-.blog-details {
-    padding: 50px 50px 0 50px;
-}
-.blog-details .blog-img {
-    width: 100%;
-  
-}
-.blog-details .blog-text {
-    width: 100%;
-    margin-top: 10px;
-}
-.about-details {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 30px;
-}
-.about-details .about-img {
-    width: 100%;
-
-}
-.about-details .about-text {
-    width: 100%;
-    
-}
-.form-details {
-    width: 80%;
-    height: 450px;
-    padding: 30px 20px;
-}
-.map-details {
-    display: flex;
-    flex-direction: column;
-     margin: 50px 30px;
-    
-}
-.map{
-    width: 100%;
-}
-.map-address{
-    width: 100%;
-    margin-top: 5px;
-    padding: 0;
-}
-
-
-
-    .cart-item {
-        font-size: 10px;
-    }
-
-    .cart-item img {
-        width: 50px;
-        height: 50px;
-    }
-
-    .cart-item h4,
-    .cart-item p {
-        font-size: 10px;
-        margin: 0;
-    }
-
-    .cart-page {
-        width: 100%;
-        padding: 20px 10px;
-        box-sizing: border-box;
-    }
-
-    .cart-page h2 {
-        font-size: 1.3rem;
-        margin-bottom: 20px;
-    }
-
-    .cart-page table {
-        width: 100%;
-        table-layout: fixed;
-        font-size: 10px;
-    }
-
-    .cart-page th,
-    .cart-page td {
-        padding: 6px 3px;
-        font-size: 10px;
-        text-align: center;
-        word-wrap: break-word;
-    }
-
-    .cart-page td img {
-        width: 40px;
-        height: 40px;
-    }
-
-    .remove-btn {
-        font-size: 8px;
-        padding: 4px 5px;
-    }
-
-    .cart-total {
-        width: 250px;
-        margin: 30px 10px 50px auto;
-        padding: 15px;
-        box-sizing: border-box;
-    }
-
-    .cart-total h3 {
-        font-size: 1rem;
-        margin-bottom: 12px;
-    }
-
-    .cart-total p {
-        font-size: 0.8rem;
-        margin-bottom: 15px;
-    }
-
-    #checkout-btn {
-        padding: 9px;
-        font-size: 0.75rem;
-    }
-
-       .cart-page table td:nth-child(2) {
-        font-size: 7px !important;
-        line-height: 1.1 !important;
-        padding: 5px 2px !important;
-        max-width: 60px !important;
-        overflow-wrap: anywhere !important;
-        word-break: break-word !important;
-    }
-
-    .plus-btn,
-    .minus-btn {
-        width: 18px;
-        height: 18px;
-        font-size: 11px;
-        line-height: 16px;
-        border-radius: 3px;
-    }
- .checkout {
-        padding: 40px 5%;
-    }
-
-    .checkout-container {
-        flex-direction: column;
-        gap: 30px;
-    }
-
-    .billing-details,
-    .order-summary {
-        width: 100%;
-    }
-
-
-}
-
-
-
-@media(min-width: 768px) and (max-width: 1024px){
-    .hero-section{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        min-height: 0;
-        height: auto;
-        padding: 20px 30px 30px;
-    }
-    
-    .pro-container{
-       display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 25px;
-    margin: 0 20px;
-}
-.pro{
-    width: 40%;
-    max-width: 400px;
-     margin: 20px 0;
-    padding: 0 5px;
-    position: relative;
-}
-
-    .text-content{
-        width: 45%;
-    }
-    .hero-section img{
-        width: 55%;
-        height: auto;
-        object-fit: cover;
-        object-position: center;
-    }
-    .text-content h2{
-        font-size: 3.8rem;
-        line-height: 1.2;
-    }
-.banner {
-    height: 25vh;
-}
-   
-
-  .sm-banner{
-        padding: 25px 30px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-
-    .sm-banner .bannerbox{
-        flex: 1;
-        height: 25vh;
-        justify-content: center;
-        align-items: flex-start;
-        text-align: left;
-    }
-
-    .sm-banner .bannerbox h2{
-        font-size: 2rem;
-        line-height: 1.2;
-    }
-
-    .sm-banner .bannerbox h6{
-        font-size: 1rem;
-    }
-     .newsletter .form{
-        width: 70%;
-    }
-    .newsletter{
-        display: flex;
-        align-items: center;
-        height: 20vh;
-        justify-content: center;
-    }
-
-} */

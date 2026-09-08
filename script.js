@@ -173,7 +173,7 @@ if (cartItems) {
         button.closest('tr').remove();
 
 
-        // Recalculate subtotal
+    
         let subtotal = 0;
 
         savedCart.forEach(product => {
@@ -188,7 +188,7 @@ if (cartItems) {
         document.getElementById('cart-subtotal').textContent =
             `$${subtotal.toLocaleString()}`;
 
-        // If cart is now empty
+
         if (savedCart.length === 0) {
             const checkoutBtn = document.getElementById('checkout-btn');
             const checkoutLink = checkoutBtn.parentElement;
@@ -203,12 +203,18 @@ if (cartItems) {
 }
 
 const submitBtn = document.getElementById('submit-btn');
+
 if (submitBtn) {
+    const nameInput = document.getElementById('name');
+    const phoneInput = document.getElementById('phone');
+    const emailInput = document.getElementById('email');
+    const messageInput = document.getElementById('message');
+
     submitBtn.addEventListener('click', () => {
 
         let isValid = true;
 
-        // Name
+        // Name validation
         if (nameInput.value.trim() === '') {
             nameInput.style.border = '1px solid red';
             isValid = false;
@@ -216,7 +222,7 @@ if (submitBtn) {
             nameInput.style.border = '';
         }
 
-        // Phone
+        // Phone validation
         if (phoneInput.value.trim() === '') {
             phoneInput.style.border = '1px solid red';
             isValid = false;
@@ -224,7 +230,7 @@ if (submitBtn) {
             phoneInput.style.border = '';
         }
 
-        // Email
+        // Email validation
         if (emailInput.value.trim() === '') {
             emailInput.style.border = '1px solid red';
             isValid = false;
@@ -232,7 +238,7 @@ if (submitBtn) {
             emailInput.style.border = '';
         }
 
-        // Message
+        // Message validation
         if (messageInput.value.trim() === '') {
             messageInput.style.border = '1px solid red';
             isValid = false;
@@ -240,46 +246,29 @@ if (submitBtn) {
             messageInput.style.border = '';
         }
 
+        // Show success message
         if (isValid) {
+            const oldMessage = document.querySelector('.success-message');
+
+            if (oldMessage) {
+                oldMessage.remove();
+            }
+
             const successMessage = document.createElement('p');
+            successMessage.className = 'success-message';
             successMessage.textContent = 'Message submitted successfully!';
             successMessage.style.color = 'green';
             successMessage.style.marginTop = '10px';
+
             document.querySelector('.form').appendChild(successMessage);
+
+            // Clear the form
+            nameInput.value = '';
+            phoneInput.value = '';
+            emailInput.value = '';
+            messageInput.value = '';
         }
     });
-}
-
-const checkoutItems = document.getElementById("checkoutItems");
-const checkoutTotal = document.getElementById("checkoutTotal");
-if (checkoutItems && checkoutTotal) {
-    const cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-    let total = 0;
-
-    if (cart.length === 0) {
-        checkoutItems.innerHTML = "<p>Your cart is empty.</p>";
-        checkoutTotal.textContent = "$0";
-    } else {
-        cart.forEach(product => {
-
-            const price = parseFloat(
-                String(product.price).replace(/[^0-9.]/g, '')
-            ) || 0;
-
-            const quality = Number(product.quality) || 1;
-            const productTotal = price * quality;
-            total += productTotal;
-
-            checkoutItems.innerHTML += `
-                <div class="checkout-item">
-                    <span>${product.name} × ${quality}</span>
-                    <span>$${productTotal.toLocaleString()}</span>
-                </div>
-            `;
-        });
-        checkoutTotal.textContent = `$${total.toLocaleString()}`;
-    }
 }
 
 const checkoutForm = document.getElementById('checkoutForm');
