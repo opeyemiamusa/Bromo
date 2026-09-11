@@ -264,6 +264,23 @@ if (submitBtn) {
     });
 }
 
+const checkoutTotal = document.getElementById('checkoutTotal');
+
+if (checkoutItems && checkoutTotal) {
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    let total = 0;
+
+    cart.forEach(item => {
+        const price = Number(item.price.replace(/[₦,$]/g, ''));
+        const quantity = Number(item.quality) || 1;
+
+        total += price * quantity;
+    });
+
+    checkoutTotal.textContent = `₦${total.toLocaleString()}`;
+}
+
 const checkoutForm = document.getElementById('checkoutForm');
 if (checkoutForm) {
     checkoutForm.addEventListener('submit', (event) => {
