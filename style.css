@@ -16,12 +16,11 @@ nav{
     justify-content: space-between;
     align-items: center;
     padding: 10px 40px;
-         background: #f8fafc;
+    background: #f8fafc;
     box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-
 }
 header{
-  width: 100%;
+    width: 100%;
     height: 70px;
     position: fixed;
     top: 0;
@@ -32,8 +31,7 @@ header{
 .nav-links{
     display: flex;
     align-items: center;
-    justify-content: center;
-   
+    justify-content: center; 
 }
 .nav-links li{
     list-style: none;
@@ -89,7 +87,6 @@ nav .fa-shopping-cart:active{
     background-size: cover;
     width: 55%;
     height: 90vh;
-
     opacity: 0;
     transform: translateX(50px);
 }
@@ -100,12 +97,9 @@ nav .fa-shopping-cart:active{
     justify-content: center;
     flex-direction: column;
     text-align: left;
-
     opacity: 0;
     transform: translateX(-50px);
 }
-
-/* Start animation when JavaScript adds .animate */
 
 .hero-section.animate img {
     animation: heroRight 2s ease forwards;
@@ -187,10 +181,10 @@ nav .fa-shopping-cart:active{
 .Product p{
     font-size: 1.2rem;
     text-align: center;
-  
+ 
 }
 .pro-container{
-       display: flex;
+    display: flex;
     justify-content: center;
     gap: 15px;
     flex-wrap: wrap;
@@ -253,7 +247,7 @@ nav .fa-shopping-cart:active{
     color: goldenrod;
     font-size: 1rem;
 }
-.add-cart{
+.add-cart, .view-product{
     cursor: pointer;
    position: absolute;
    bottom: 15px;
@@ -264,7 +258,8 @@ nav .fa-shopping-cart:active{
    border-radius: 50px;
    border: 1px solid #555;
 }
-.add-cart .fa-shopping-cart{
+.add-cart .fa-shopping-cart,
+.view-product .fa-shopping-cart{
     color: darkslateblue;
 }
 .banner{
@@ -492,8 +487,6 @@ nav .fa-shopping-cart:active{
     border-radius: 0 5px 5px 0;
     margin: 0;
 }
-
-
 .footer{
     width: 100%;
     background-color: #f8fafc;
@@ -600,7 +593,7 @@ nav .fa-shopping-cart:active{
     background-position:center;
     background-size: cover;
     color: #fff;
-     margin-top: 50px;
+    margin-top: 50px;
 }
 
 .Shop-page h2,
@@ -669,8 +662,6 @@ nav .fa-shopping-cart:active{
     object-fit: cover;
     border-radius: 8px;
 }
-
-
 .add-cart:active {
     transform: scale(0.8);
 }
@@ -1315,6 +1306,41 @@ nav .fa-shopping-cart:active{
         opacity: 1;
         transform: translateY(0);
     }
+}
+.cart-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.cart-modal-content {
+    background: white;
+    width: 350px;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+}
+#close-cart-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 25px;
+    cursor: pointer;
+}
+.cart-modal-content a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: black;
+    color: white;
+    text-decoration: none;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {

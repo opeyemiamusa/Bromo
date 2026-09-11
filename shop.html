@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bromo</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/logo.png">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css" integrity="sha384-NvKbDTEnL+A8F/AA5Tc5kmMLSJHUO868P+lDtTpJIeQdGYaUIuLr4lVGOEA1OcMy" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -48,14 +49,13 @@
                       <i class="fa-solid fa-star"></i>
                       <i class="fa-solid fa-star"></i>
                       <i class="fa-solid fa-star"></i>
-                      <i class="fa-solid fa-star-half-stroke"></i>
-                      
+                      <i class="fa-solid fa-star-half-stroke"></i>  
                     </div>
                     <div class="price"> $80</div>
                 </div>
-                <div class="add-cart">
+                <a class="view-product" href='sproduct.html'>
                        <i class="fas fa-shopping-cart"></i>
-                </div>
+                </a>
             </div>
             <div class="pro" onclick="window.location.href='bs-Product.html'">
                 <img src="images/e8.jpg" alt="">
@@ -74,9 +74,9 @@
                     </div>
                     <div class="price"> $80</div>
                 </div>
-                <div class="add-cart">
+                <a class="view-product" href='bs-Product.html'>
                        <i class="fas fa-shopping-cart"></i>
-                </div>
+                </a>
             </div>
             <div class="pro">
                 <img src="images/n4.jpg" alt="">
@@ -116,9 +116,9 @@
                     </div>
                     <div class="price"> $80</div>
                 </div>
-                <div class="add-cart">
+                <a class="view-product" href='sbag.html'>
                        <i class="fas fa-shopping-cart"></i>
-                </div>
+                </a>
             </div>
             <div class="pro">
                 <img src="images/d2.jpg" alt="">
@@ -297,6 +297,14 @@
             <button>2</button>
             <button>></button>
         </section>
+        <div class="cart-modal" id="cart-modal">
+        <div class="cart-modal-content">
+            <span id="close-cart-modal">&times;</span>
+            <h3>Added to Cart</h3>
+            <p>Your product has been added to your cart.</p>
+            <a href="cart.html">View Cart</a>
+        </div>
+    </div>
         <footer class="footer">
   <div class="col">
     <a href="index.html">

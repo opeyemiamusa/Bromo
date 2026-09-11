@@ -19,7 +19,6 @@ smallImg.forEach(img => {
 });
 
 const shopBtns = document.querySelectorAll('.add-cart');
-
 shopBtns.forEach(button => {
     button.addEventListener('click', (event) => {
         event.stopPropagation();
@@ -45,8 +44,14 @@ shopBtns.forEach(button => {
             cart.push(productInfo);
         }
         localStorage.setItem('cart', JSON.stringify(cart));
-    });
-});
+    
+        const cartModal = document.getElementById('cart-modal');
+
+      if (cartModal) {
+         cartModal.style.display = 'flex';
+         }
+      });
+     });
 
   const addToCartBtns = document.querySelectorAll('#addToCartBtn');
 if (addToCartBtns) {
@@ -82,6 +87,11 @@ if (addToCartBtns) {
             }
 
             localStorage.setItem('cart', JSON.stringify(cart));
+          
+       const cartModal = document.getElementById('cart-modal');
+      if (cartModal) {
+           cartModal.style.display = 'flex';
+         }
         });
     });
 }
@@ -131,15 +141,18 @@ if (cartItems) {
         cartItems.appendChild(row);
     });
 
-   let subtotal = 0;
-   savedCart.forEach(product =>{
-     const price = parseFloat(product.price.replace(/[^0-9]/g, '')) || 0;
-     const quantity = Number(product.quality)||1;
-     subtotal += price*quantity;
+  function updateCartSummary() {
+    let subtotal = 0;
+    savedCart.forEach(product => {
+        const price = parseFloat(product.price.replace(/[^0-9]/g, '')) || 0;
+        const quantity = Number(product.quality) || 1;
 
-     const cartSubtotal = document.getElementById('cart-subtotal');
-     cartSubtotal.textContent = `$${subtotal.toLocaleString()}`;
-   });
+        subtotal += price * quantity;
+    });
+    document.getElementById('cart-subtotal').textContent =
+        `$${subtotal.toLocaleString()}`;
+}
+updateCartSummary();
 
    const plusBtns = document.querySelectorAll('.plus-btn');
    plusBtns.forEach(button => {
@@ -172,22 +185,7 @@ if (cartItems) {
         localStorage.setItem('cart', JSON.stringify(savedCart));
         button.closest('tr').remove();
 
-
-    
-        let subtotal = 0;
-
-        savedCart.forEach(product => {
-            const price = parseFloat(
-                product.price.replace(/[^0-9]/g, '')
-            ) || 0;
-
-            const quantity = Number(product.quality) || 1;
-
-            subtotal += price * quantity;
-        });
-        document.getElementById('cart-subtotal').textContent =
-            `$${subtotal.toLocaleString()}`;
-
+       updateCartSummary();
 
         if (savedCart.length === 0) {
             const checkoutBtn = document.getElementById('checkout-btn');
@@ -203,7 +201,6 @@ if (cartItems) {
 }
 
 const submitBtn = document.getElementById('submit-btn');
-
 if (submitBtn) {
     const nameInput = document.getElementById('name');
     const phoneInput = document.getElementById('phone');
@@ -214,7 +211,6 @@ if (submitBtn) {
 
         let isValid = true;
 
-        // Name validation
         if (nameInput.value.trim() === '') {
             nameInput.style.border = '1px solid red';
             isValid = false;
@@ -222,7 +218,6 @@ if (submitBtn) {
             nameInput.style.border = '';
         }
 
-        // Phone validation
         if (phoneInput.value.trim() === '') {
             phoneInput.style.border = '1px solid red';
             isValid = false;
@@ -230,7 +225,6 @@ if (submitBtn) {
             phoneInput.style.border = '';
         }
 
-        // Email validation
         if (emailInput.value.trim() === '') {
             emailInput.style.border = '1px solid red';
             isValid = false;
@@ -238,7 +232,6 @@ if (submitBtn) {
             emailInput.style.border = '';
         }
 
-        // Message validation
         if (messageInput.value.trim() === '') {
             messageInput.style.border = '1px solid red';
             isValid = false;
@@ -396,3 +389,11 @@ if (aboutDetails) {
     aboutObserver.observe(aboutDetails);
 }
 
+const cartModal = document.getElementById('cart-modal');
+const closeCartModal = document.getElementById('close-cart-modal');
+
+if (closeCartModal) {
+    closeCartModal.addEventListener('click', () => {
+        cartModal.style.display = 'none';
+    });
+}
