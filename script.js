@@ -264,6 +264,7 @@ if (submitBtn) {
     });
 }
 
+const checkoutItems = document.getElementById('checkoutItems');
 const checkoutTotal = document.getElementById('checkoutTotal');
 
 if (checkoutItems && checkoutTotal) {
