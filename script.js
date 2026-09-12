@@ -282,7 +282,7 @@ if (checkoutItems && checkoutTotal) {
     let total = 0;
 
     cart.forEach(item => {
-        const price = Number(item.price.replace(/[^0-9]/g, ''));
+        const price = Number(item.price.replace(/[$,]/g, ''));
         const quantity = Number(item.quality) || 1;
 
         total += price * quantity;
