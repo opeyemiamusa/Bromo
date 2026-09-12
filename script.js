@@ -116,7 +116,7 @@ if (cartItems) {
     }
 
     savedCart.forEach((product, index) => {
-        const price = parseFloat(product.price.replace(/[^0-9]/g, '')) || 0;
+         const price = parseFloat(product.price.replace(/[$,]/g, '')) || 0;
         const quality = Number(product.quality) || 1;
         const total = price * quality;
 
@@ -126,13 +126,19 @@ if (cartItems) {
             <td><img src="${product.image}" alt="${product.name}"></td>
             <td>${product.name}</td>
             <td>${product.size || 'N/A'}</td>
-            <td>$${price.toLocaleString()}</td>
+            <td>$${price.toLocaleString('en-US', {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2
+         })}</td>
             <td>
                 <button class="minus-btn" data-index="${index}">-</button>
                 <span>${quality}</span>
                 <button class="plus-btn" data-index="${index}">+</button>
             </td>
-            <td>$${total.toLocaleString()}</td>
+            <td>$${total.toLocaleString('en-US', {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2
+})}</td>
             <td>
                 <button class="remove-btn" data-index="${index}">Remove</button>
             </td>
@@ -144,13 +150,16 @@ if (cartItems) {
   function updateCartSummary() {
     let subtotal = 0;
     savedCart.forEach(product => {
-        const price = parseFloat(product.price.replace(/[^0-9]/g, '')) || 0;
+        const price = parseFloat(product.price.replace(/[$,]/g, '')) || 0;
         const quantity = Number(product.quality) || 1;
 
         subtotal += price * quantity;
     });
     document.getElementById('cart-subtotal').textContent =
-        `$${subtotal.toLocaleString()}`;
+        `$${subtotal.toLocaleString('en-US', {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2
+})}`;
 }
 updateCartSummary();
 
@@ -273,13 +282,17 @@ if (checkoutItems && checkoutTotal) {
     let total = 0;
 
     cart.forEach(item => {
-        const price = Number(item.price.replace(/[₦,$]/g, ''));
+        const price = Number(item.price.replace(/[^0-9]/g, ''));
         const quantity = Number(item.quality) || 1;
 
         total += price * quantity;
     });
 
-    checkoutTotal.textContent = `₦${total.toLocaleString()}`;
+    checkoutTotal.textContent = `$${total.toLocaleString('en-US', {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+    })}`;
+
 }
 
 const checkoutForm = document.getElementById('checkoutForm');
